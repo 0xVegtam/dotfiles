@@ -1,0 +1,51 @@
+# enable color support of ls and also add handy aliases
+alias ls='ls --color=always'
+alias dir='dir --color=auto'
+alias vdir='vdir --color=auto'
+alias grep='grep --color=always'
+alias fgrep='fgrep --color=always'
+alias egrep='egrep --color=always'
+# some more ls aliases
+alias ll='ls -alGF --color=always'
+alias la='ls -A'
+alias l='ls -CF'
+# Add an "alert" alias for long running commands.  Use like so:
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+alias jaegrind='valgrind --leak-check=yes'
+alias submit=submitscript
+alias jaeclean=jaeclean
+alias diskspace="du -S | sort -n -r |more"
+alias folders='find . -maxdepth 1 -type d -print0 | xargs -0 du -sk | sort -rn'
+# cd aliases
+alias ..='cd .. && ll'
+alias up='cd "$OLDPWD"'
+alias ...='cd ../.. && ll'
+alias ....='cd ../../.. && ll'
+alias logs="find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f"
+alias td='pushd $(mktemp -d)'
+alias gs='git status'
+alias gc='git commit'
+alias ga='git add'
+alias gd='git diff'
+alias gb='git branch'
+alias gl='git log'
+alias gsb='git show-branch'
+alias gco='git checkout'
+alias gg='git grep'
+alias gk='gitk --all'
+alias gr='git rebase'
+alias gri='git rebase --interactive'
+alias gcp='git cherry-pick'
+alias grm='git rm'
+#alias nospotlight='sudo mdutil -a -i off'
+#alias cleardnscache='sudo killall -HUP mDNSResponder'
+#alias ldd='otool -L'
+#alias seq='jot - '
+#alias eject='drutil eject'
+alias dmesg='dmesg --color'
+alias pacman='pacman --color=auto'
+alias grep="grep --color=auto"
+alias egrep="egrep --color=auto"
+alias fgrep="fgrep --color=auto"
+alias gccg='gcc -g -Wall'
+alias g++g='g++ -g -Wall'
