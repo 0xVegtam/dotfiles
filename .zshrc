@@ -49,6 +49,7 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+alias vim='nvim'
 export EDITOR=nvim
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
 
