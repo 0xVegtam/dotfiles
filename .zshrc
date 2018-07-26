@@ -54,3 +54,4 @@ export EDITOR=nvim
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
 
 source $HOME/.aliases
+source $HOME/.functions
