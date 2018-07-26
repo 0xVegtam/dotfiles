@@ -6,14 +6,12 @@ alias grep='grep --color=always'
 alias fgrep='fgrep --color=always'
 alias egrep='egrep --color=always'
 # some more ls aliases
-alias ll='ls -alGF --color=always'
-alias la='ls -A'
+alias ll='ls -alF --color=always'
+alias la='ls -a'
 alias l='ls -CF'
 # Add an "alert" alias for long running commands.  Use like so:
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 alias jaegrind='valgrind --leak-check=yes'
-alias submit=submitscript
-alias jaeclean=jaeclean
 alias diskspace="du -S | sort -n -r |more"
 alias folders='find . -maxdepth 1 -type d -print0 | xargs -0 du -sk | sort -rn'
 # cd aliases
