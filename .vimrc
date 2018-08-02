@@ -90,19 +90,6 @@ set ignorecase
 set backspace=2
 
 
-
-"For Soarized Theme
-"let g:solarized_termcolors=256
-"colorscheme solarized
-
-"colorscheme base16-default
-"set background=dark
-"let base16colorspace=256
-
-set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
-set statusline=%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\
-  \ [%l/%L\ (%p%%)
-
 filetype plugin indent on
 "Python file settings
 au FileType py set autoindent
@@ -129,18 +116,20 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle, required
+" let Vundle manage Vundle - required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vimwiki/vimwiki'
 Plugin 'Raimondi/delimitMate'
+Plugin 'itchyny/lightline.vim'
 Plugin 'klen/python-mode'
-Plugin 'tpope/vim-rails'
+Plugin 'junegunn/fzf'
+Plugin 'tpope/vim-eunuch'
 Plugin 'mips.vim'
 Plugin 'tpope/vim-endwise'
 Plugin 'scrooloose/syntastic'
@@ -154,7 +143,11 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'chriskempson/base16-vim'
+Plugin 'airblade/vim-gitgutter'
 
+Plugin 'vim-latex/vim-latex'
+" -- IntelliJ IDE communication - for Android Studio
+Plugin 'dhleong/intellivim'
 
 " -- Web Development
 Plugin 'Shutnik/jshint2.vim'        
@@ -163,8 +156,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'groenewege/vim-less'        
 Plugin 'skammer/vim-css-color'      
 Plugin 'hail2u/vim-css3-syntax'     
-Plugin 'digitaltoad/vim-jade'       
-
+Plugin 'digitaltoad/vim-jade'   
 
 
 " -- All of your Plugins must be added before the following line
@@ -178,3 +170,9 @@ filetype plugin indent on    " required
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+
+
+"For Soarized Theme
+let g:solarized_termcolors=256
+colorscheme solarized
+set background=dark
