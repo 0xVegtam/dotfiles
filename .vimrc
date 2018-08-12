@@ -102,8 +102,6 @@ au FileType py set tabstop=4
 au FileType txt set spell
 "Stop syntastic from operating on python files
 let g:syntastic_mode_map = { 'passive_filetypes': ['python'] }
-"If python script, use F9 to run the script
-autocmd FileType python nnoremap <buffer> <F9> :exec '!python3' shellescape(@%, 1)<cr>
 set cindent
 
 
@@ -134,16 +132,23 @@ Plugin 'mips.vim'
 Plugin 'tpope/vim-endwise'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'skalnik/vim-vroom'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-surround'
 
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'chriskempson/base16-vim'
 Plugin 'airblade/vim-gitgutter'
+
+"Themes
+Plugin 'rakr/vim-one'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'TroyFletcher/vim-colors-synthwave'
+Plugin 'nightsense/carbonized'
+
 
 Plugin 'vim-latex/vim-latex'
 " -- IntelliJ IDE communication - for Android Studio
@@ -173,6 +178,6 @@ filetype plugin indent on    " required
 
 
 "For Soarized Theme
-let g:solarized_termcolors=256
-colorscheme solarized
+"let g:solarized_termcolors=256
+colorscheme synthwave
 set background=dark
