@@ -163,6 +163,10 @@ Plugin 'skammer/vim-css-color'
 Plugin 'hail2u/vim-css3-syntax'     
 Plugin 'digitaltoad/vim-jade'   
 
+"Devops 
+Plugin 'hashivim/vim-terraform'
+
+
 
 " -- All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -181,3 +185,7 @@ filetype plugin indent on    " required
 "let g:solarized_termcolors=256
 colorscheme synthwave
 set background=dark
+
+"Remap the escape key functionality to jj. This was done because of the macbook
+"touchbar
+inoremap jj <ESC>
