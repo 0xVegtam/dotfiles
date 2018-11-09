@@ -20,6 +20,11 @@ antigen bundle rupa/z
 antigen bundle pip
 antigen bundle python
 antigen bundle virtualenv
+#Virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devspace
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+source /usr/local/bin/virtualenvwrapper.sh
 
 # OS specific plugins
 if [[ $CURRENT_OS == 'OS X' ]]; then
@@ -55,3 +60,4 @@ export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
 
 source $HOME/.aliases
 source $HOME/.functions
+export PATH="/usr/local/sbin:$PATH"
