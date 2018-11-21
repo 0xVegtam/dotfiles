@@ -6,11 +6,11 @@ set nocompatible
 "Enables syntax highlighting
 :syntax on
 
-"highlight the last used search pattern.
-set hlsearch
-
 "Enables line numbers on side
 :set nu
+
+"highlight the last used search pattern.
+set hlsearch
 
 " make vim try to detect file types and load plugins for them
 filetype on
@@ -162,6 +162,7 @@ Plugin 'groenewege/vim-less'
 Plugin 'skammer/vim-css-color'      
 Plugin 'hail2u/vim-css3-syntax'     
 Plugin 'digitaltoad/vim-jade'   
+Plugin 'elzr/vim-json'
 
 "Devops 
 Plugin 'hashivim/vim-terraform'

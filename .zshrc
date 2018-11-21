@@ -4,9 +4,8 @@ source $HOME/antigen.zsh
 #
 
 antigen theme evan
-#
+
 # Antigen Bundles
-#
 
 antigen bundle git
 antigen bundle tmuxinator
@@ -20,7 +19,8 @@ antigen bundle rupa/z
 antigen bundle pip
 antigen bundle python
 antigen bundle virtualenv
-#Virtualenvwrapper
+
+#Virtualenvwrapper Config 
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devspace
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
@@ -41,6 +41,13 @@ fi
 
 antigen apply
 
+
+# Uncomment the following line to use case-sensitive completion.
+ CASE_SENSITIVE="true"
+
+#
+#Config for thefuck
+#
 eval "$(thefuck --alias)"
 # You can use whatever you want as an alias, like for Mondays:
 eval "$(thefuck --alias FUCK)"
