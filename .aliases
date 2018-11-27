@@ -48,3 +48,4 @@ alias egrep="egrep --color=auto"
 alias fgrep="fgrep --color=auto"
 alias gccg='gcc -g -Wall'
 alias g++g='g++ -g -Wall'
+alias dev='cd ~/Devspace'

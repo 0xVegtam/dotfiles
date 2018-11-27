@@ -2,15 +2,24 @@ source $HOME/antigen.zsh
 #
 # Antigen Theme
 #
-
-antigen theme evan
+POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
+antigen theme bhilburn/powerlevel9k powerlevel9k
+POWERLEVEL9K_DISABLE_RPROMPT=true
+POWERLEVEL9K_COLOR_SCHEME='dark'
+POWERLEVEL9K_MODE='nerdfont-complete'
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(host dir vcs)
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+#antigen theme evan
 
 # Antigen Bundles
 
 antigen bundle git
 antigen bundle tmuxinator
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle rupa/z
+antigen bundle bhilburn/powerlevel9k
+antigen bundle colorize
 
 # For SSH, starting ssh-agent is annoying
 #antigen bundle ssh-agent
@@ -32,6 +41,9 @@ if [[ $CURRENT_OS == 'OS X' ]]; then
     antigen bundle brew-cask
     antigen bundle gem
     antigen bundle osx
+    #iTerm is only used on OSX
+    test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+    export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
 elif [[ $CURRENT_OS == 'Linux' ]]; then
     # None so far...
 
@@ -43,11 +55,10 @@ antigen apply
 
 
 # Uncomment the following line to use case-sensitive completion.
- CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 
-#
+
 #Config for thefuck
-#
 eval "$(thefuck --alias)"
 # You can use whatever you want as an alias, like for Mondays:
 eval "$(thefuck --alias FUCK)"
@@ -63,8 +74,13 @@ compinit
 
 alias vim='nvim'
 export EDITOR=nvim
-export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
 
 source $HOME/.aliases
 source $HOME/.functions
 export PATH="/usr/local/sbin:$PATH"
+
+
+#ZSH Autosuggestions
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+#export TERM="xterm-256color"
+
