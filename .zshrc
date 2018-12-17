@@ -7,7 +7,8 @@ antigen theme bhilburn/powerlevel9k powerlevel9k
 POWERLEVEL9K_DISABLE_RPROMPT=true
 POWERLEVEL9K_COLOR_SCHEME='dark'
 POWERLEVEL9K_MODE='nerdfont-complete'
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(host dir vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(host dir virtualenv vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv aws)
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 #antigen theme evan
 
@@ -53,6 +54,8 @@ fi
 
 antigen apply
 
+#Added by Nix package manager
+. /Users/gabe/.nix-profile/etc/profile.d/nix.sh
 
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="true"

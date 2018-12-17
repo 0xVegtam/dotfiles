@@ -142,6 +142,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'chriskempson/base16-vim'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'tell-k/vim-autopep8'
 
 "Themes
 Plugin 'rakr/vim-one'
@@ -164,8 +165,10 @@ Plugin 'hail2u/vim-css3-syntax'
 Plugin 'digitaltoad/vim-jade'   
 Plugin 'elzr/vim-json'
 
-"Devops 
+" -- Devops 
 Plugin 'hashivim/vim-terraform'
+
+Plugin 'juliosueiras/vim-terraform-completion'
 
 
 
@@ -182,6 +185,10 @@ filetype plugin indent on    " required
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 
 
+" -- Terraform config
+let g:terraform_align=1
+let g:terraform_fmt_on_save=1
+
 "For Soarized Theme
 "let g:solarized_termcolors=256
 colorscheme synthwave
@@ -190,3 +197,6 @@ set background=dark
 "Remap the escape key functionality to jj. This was done because of the macbook
 "touchbar
 inoremap jj <ESC>
+
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
