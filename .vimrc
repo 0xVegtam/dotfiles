@@ -122,7 +122,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-fugitive'
-Plugin 'vimwiki/vimwiki'
+"Plugin 'vimwiki/vimwiki'
 Plugin 'Raimondi/delimitMate'
 Plugin 'itchyny/lightline.vim'
 Plugin 'klen/python-mode'
@@ -134,16 +134,16 @@ Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'skalnik/vim-vroom'
-Plugin 'vim-ruby/vim-ruby'
 Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-surround'
-
+Plugin 'w0rp/ale'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'chriskempson/base16-vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tell-k/vim-autopep8'
-
+Plugin 'fatih/vim-go'
+Plugin 'wincent/command-t'
 "Themes
 Plugin 'rakr/vim-one'
 Plugin 'altercation/vim-colors-solarized'
@@ -167,10 +167,7 @@ Plugin 'elzr/vim-json'
 
 " -- Devops 
 Plugin 'hashivim/vim-terraform'
-
 Plugin 'juliosueiras/vim-terraform-completion'
-
-
 
 " -- All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -188,6 +185,32 @@ filetype plugin indent on    " required
 " -- Terraform config
 let g:terraform_align=1
 let g:terraform_fmt_on_save=1
+
+
+" -- Go config
+au FileType go set noexpandtab
+au FileType go set shiftwidth=4
+au FileType go set softtabstop=4
+au FileType go set tabstop=4
+
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_types = 1
+
+let g:go_fmt_command = "goimports"
+let g:go_auto_sameids = 1
+
+" -- Go linter config
+" Error and warning signs.
+let g:ale_sign_error = '⤫'
+let g:ale_sign_warning = '⚠'
+" Enable integration with airline.
+let g:airline#extensions#ale#enabled = 1
 
 "For Soarized Theme
 "let g:solarized_termcolors=256

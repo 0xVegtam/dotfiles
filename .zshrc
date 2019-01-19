@@ -2,14 +2,16 @@ source $HOME/antigen.zsh
 #
 # Antigen Theme
 #
-POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
-antigen theme bhilburn/powerlevel9k powerlevel9k
-POWERLEVEL9K_DISABLE_RPROMPT=true
-POWERLEVEL9K_COLOR_SCHEME='dark'
-POWERLEVEL9K_MODE='nerdfont-complete'
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(host dir virtualenv vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv aws)
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+antigen theme geometry-zsh/geometry
+
+#POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
+#antigen theme bhilburn/powerlevel9k powerlevel9k
+#POWERLEVEL9K_DISABLE_RPROMPT=true
+#POWERLEVEL9K_COLOR_SCHEME='dark'
+#POWERLEVEL9K_MODE='nerdfont-complete'
+#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(host dir virtualenv vcs)
+#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv aws)
+#POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 #antigen theme evan
 
 # Antigen Bundles
@@ -22,19 +24,17 @@ antigen bundle rupa/z
 antigen bundle bhilburn/powerlevel9k
 antigen bundle colorize
 
-# For SSH, starting ssh-agent is annoying
-#antigen bundle ssh-agent
 
 # Python Plugins
 antigen bundle pip
 antigen bundle python
-antigen bundle virtualenv
 
 #Virtualenvwrapper Config 
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devspace
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 source /usr/local/bin/virtualenvwrapper.sh
+export VIRTUAL_ENV_DISABLE_PROMPT=0
 
 # OS specific plugins
 if [[ $CURRENT_OS == 'OS X' ]]; then
@@ -54,11 +54,16 @@ fi
 
 antigen apply
 
-#Added by Nix package manager
-. /Users/gabe/.nix-profile/etc/profile.d/nix.sh
-
+#Save History 
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+HISTDUP=erase               #Erase duplicates in the history file
+setopt    appendhistory     #Append history to the history file (no overwriting)
+setopt    sharehistory      #Share history across terminals
+setopt    incappendhistory  #Immediately append to the history file, not just when a term is killed
 # Uncomment the following line to use case-sensitive completion.
-CASE_SENSITIVE="true"
+#CASE_SENSITIVE="true"
 
 
 #Config for thefuck
@@ -82,8 +87,11 @@ source $HOME/.aliases
 source $HOME/.functions
 export PATH="/usr/local/sbin:$PATH"
 
+#Go config
+export GOPATH="${HOME}"
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
 #ZSH Autosuggestions
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-#export TERM="xterm-256color"
 
