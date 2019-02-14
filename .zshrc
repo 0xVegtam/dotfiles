@@ -2,7 +2,7 @@ source $HOME/antigen.zsh
 #
 # Antigen Theme
 #
-antigen theme geometry-zsh/geometry
+#antigen theme geometry-zsh/geometry
 
 #POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
 #antigen theme bhilburn/powerlevel9k powerlevel9k
@@ -12,7 +12,7 @@ antigen theme geometry-zsh/geometry
 #POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(host dir virtualenv vcs)
 #POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv aws)
 #POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
-#antigen theme evan
+antigen theme evan
 
 # Antigen Bundles
 
@@ -30,11 +30,11 @@ antigen bundle pip
 antigen bundle python
 
 #Virtualenvwrapper Config 
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Devspace
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-source /usr/local/bin/virtualenvwrapper.sh
-export VIRTUAL_ENV_DISABLE_PROMPT=0
+#export WORKON_HOME=$HOME/.virtualenvs
+#export PROJECT_HOME=$HOME/Devspace
+#export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+#source /usr/local/bin/virtualenvwrapper.sh
+#export VIRTUAL_ENV_DISABLE_PROMPT=0
 
 # OS specific plugins
 if [[ $CURRENT_OS == 'OS X' ]]; then
@@ -70,7 +70,6 @@ setopt    incappendhistory  #Immediately append to the history file, not just wh
 eval "$(thefuck --alias)"
 # You can use whatever you want as an alias, like for Mondays:
 eval "$(thefuck --alias FUCK)"
-
 # The following lines were added by compinstall
 
 zstyle ':completion:*' completer _expand _complete _ignored
@@ -86,7 +85,7 @@ export EDITOR=nvim
 source $HOME/.aliases
 source $HOME/.functions
 export PATH="/usr/local/sbin:$PATH"
-
+export PATH="$PATH:$HOME/devspace/flutter/bin"
 #Go config
 export GOPATH="${HOME}"
 export GOROOT="$(brew --prefix golang)/libexec"

@@ -214,7 +214,7 @@ let g:airline#extensions#ale#enabled = 1
 
 "For Soarized Theme
 "let g:solarized_termcolors=256
-colorscheme synthwave
+"colorscheme synthwave
 set background=dark
 
 "Remap the escape key functionality to jj. This was done because of the macbook
