@@ -29,6 +29,7 @@ antigen bundle colorize
 antigen bundle pip
 antigen bundle python
 
+antigen bundle docker
 #Virtualenvwrapper Config 
 #export WORKON_HOME=$HOME/.virtualenvs
 #export PROJECT_HOME=$HOME/Devspace
@@ -91,6 +92,11 @@ export GOPATH="${HOME}"
 export GOROOT="$(brew --prefix golang)/libexec"
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
+#Ruby config
+export GEM_HOME=~/.gem
+export GEM_PATH=~/.gem/bin
+export PATH="$PATH:${GEM_PATH}"
+
 #ZSH Autosuggestions
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
+eval "$(rbenv init -)"

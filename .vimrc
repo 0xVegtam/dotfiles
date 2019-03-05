@@ -126,9 +126,11 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'Raimondi/delimitMate'
 Plugin 'itchyny/lightline.vim'
 Plugin 'klen/python-mode'
+Plugin 'tell-k/vim-autopep8'
 Plugin 'junegunn/fzf'
 Plugin 'tpope/vim-eunuch'
-Plugin 'mips.vim'
+"Plugin 'mips.vim'
+Plugin 'vim-scripts/DrawIt'
 Plugin 'tpope/vim-endwise'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
@@ -137,11 +139,10 @@ Plugin 'skalnik/vim-vroom'
 Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-surround'
 Plugin 'w0rp/ale'
-Plugin 'terryma/vim-multiple-cursors'
+"Plugin 'terryma/vim-multiple-cursors'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'chriskempson/base16-vim'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'tell-k/vim-autopep8'
 Plugin 'fatih/vim-go'
 Plugin 'wincent/command-t'
 "Themes
@@ -150,10 +151,10 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'TroyFletcher/vim-colors-synthwave'
 Plugin 'nightsense/carbonized'
 
-
+Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-latex/vim-latex'
 " -- IntelliJ IDE communication - for Android Studio
-Plugin 'dhleong/intellivim'
+"Plugin 'dhleong/intellivim'
 
 " -- Web Development
 Plugin 'Shutnik/jshint2.vim'        
@@ -164,10 +165,12 @@ Plugin 'skammer/vim-css-color'
 Plugin 'hail2u/vim-css3-syntax'     
 Plugin 'digitaltoad/vim-jade'   
 Plugin 'elzr/vim-json'
+Plugin 'mxw/vim-jsx'
 
 " -- Devops 
 Plugin 'hashivim/vim-terraform'
 Plugin 'juliosueiras/vim-terraform-completion'
+Plugin 'ekalinin/Dockerfile.vim'
 
 " -- All of your Plugins must be added before the following line
 call vundle#end()            " required
