@@ -29,12 +29,12 @@ antigen bundle colorize
 antigen bundle pip
 antigen bundle python
 
-antigen bundle docker
+#antigen bundle docker
 #Virtualenvwrapper Config 
-#export WORKON_HOME=$HOME/.virtualenvs
-#export PROJECT_HOME=$HOME/Devspace
-#export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-#source /usr/local/bin/virtualenvwrapper.sh
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devspace
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+source /usr/local/bin/virtualenvwrapper.sh
 #export VIRTUAL_ENV_DISABLE_PROMPT=0
 
 # OS specific plugins
@@ -81,7 +81,9 @@ compinit
 # End of lines added by compinstall
 
 alias vim='nvim'
-export EDITOR=nvim
+export EDITOR=vim
+
+ulimit -S -n 1024
 
 source $HOME/.aliases
 source $HOME/.functions
