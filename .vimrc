@@ -165,9 +165,10 @@ Plugin 'hail2u/vim-css3-syntax'
 Plugin 'digitaltoad/vim-pug'   
 Plugin 'elzr/vim-json'
 Plugin 'mxw/vim-jsx'
+Plugin 'pangloss/vim-javascript'
 
 " -- Devops 
-"Plugin 'hashivim/vim-terraform'
+Plugin 'hashivim/vim-terraform'
 "Plugin 'ekalinin/Dockerfile.vim'
 
 " -- All of your Plugins must be added before the following line
