@@ -98,6 +98,7 @@ export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 export GEM_HOME=~/.gem
 export GEM_PATH=~/.gem/bin
 export PATH="$PATH:${GEM_PATH}"
+eval "$(rbenv init -)"
 
 #ZSH Autosuggestions
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
