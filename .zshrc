@@ -34,6 +34,7 @@ antigen bundle python
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devspace
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+export PYTHONPATH=/usr/local/bin/python3
 source /usr/local/bin/virtualenvwrapper.sh
 #export VIRTUAL_ENV_DISABLE_PROMPT=0
 
@@ -103,3 +104,5 @@ eval "$(rbenv init -)"
 #ZSH Autosuggestions
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 eval "$(rbenv init -)"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

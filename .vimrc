@@ -164,8 +164,10 @@ Plugin 'mattn/emmet-vim'
 Plugin 'hail2u/vim-css3-syntax'     
 Plugin 'digitaltoad/vim-pug'   
 Plugin 'elzr/vim-json'
-Plugin 'mxw/vim-jsx'
+Plugin 'yuezk/vim-js'
+Plugin 'maxmellon/vim-jsx-pretty'
 Plugin 'pangloss/vim-javascript'
+Plugin 'tweekmonster/django-plus.vim'
 
 " -- Devops 
 Plugin 'hashivim/vim-terraform'
